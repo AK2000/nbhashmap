@@ -1,8 +1,8 @@
 nbhashmap.o: nbhashmap.c nbhashmap.h debug.h
-	gcc -std=c99 -g -Wall -Werror -c nbhashmap.c -o nbhashmap.o
+	gcc -std=c11 -g -O3 -fPIC -Wall -Werror -c nbhashmap.c -o nbhashmap.o
 
 test: test.c nbhashmap.c
-	gcc -std=c99 -g -Wall -Werror test.c -o test -lpthread
+	gcc -std=c11 -g -Wall -Werror test.c -o test -lpthread
 
 run: test
 	time ./test
