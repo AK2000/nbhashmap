@@ -4,7 +4,7 @@ DEPS = nbhashmap.h debug.h
 OBJ = nbhashmap.o test.o 
 
 %.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS) $(LDFLAGS)
+	$(CC) -c -o $@ $< $(CFLAGS) $(CPPFLAGS) $(LDFLAGS)
 
 lib: nbhashmap.o
 
